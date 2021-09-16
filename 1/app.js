@@ -33,6 +33,9 @@ function resMas(){
     if(c < 0){
         cString = "- "+(-c);
     }
+    if(a == 0 && b == 0 && c ==0){
+        console.log("Ужас так не делай");
+    }
     if(a == 0 && b == 0 && c !=0){
         console.log("Ужас так не делай");
     }
