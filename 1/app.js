@@ -1,4 +1,4 @@
-let mas = [5, 0, 30];
+let mas = [1, 2, 1];
 function resMas(){
     let a = mas[0], b = mas[1], c = mas[2], x = 0, x1 = 0, x2 = 0;
     let D = b*b - 4*a*c;
@@ -9,17 +9,11 @@ function resMas(){
     if(b == 1){
         bString = "+ ";
     }
-    if(c == 1){
-        cString = "+ ";
-    }
     if(a == -1){
         aString = "- ";
     }
     if(b == -1){
         bString = "- ";
-    }
-    if(c == -1){
-        cString = "- ";
     }
     if(a > 0 && a !=1 ){
         aString = ""+a;
@@ -27,7 +21,7 @@ function resMas(){
     if(b > 0 && b !=1){
         bString = "+ "+b;
     }
-    if(c > 0 && c !=1){
+    if(c > 0){
         cString = "+ "+c;
     }
     if(a < 0 && a !=-1){
@@ -36,11 +30,19 @@ function resMas(){
     if(b < 0 && b !=-1){
         bString = "- "+(-b);
     }
-    if(c < 0 && c !=-1){
+    if(c < 0){
         cString = "- "+(-c);
     }
-    if(a == 0){
-        console.log("Ужас а = НУЛЮ");
+    if(a == 0 && b == 0 && c !=0){
+        console.log("Ужас так не делай");
+    }
+    if(a == 0 && b != 0 && c ==0){
+        console.log("Ужас так не делай");
+    }
+    if(a == 0 && b != 0 && c !=0){
+        x = c/b;
+        console.log("Уравнение: ", bString, "x", cString, " = 0");
+        console.log("x = ", x);
     }
     if(a != 0){
         if(b != 0 && c != 0){
