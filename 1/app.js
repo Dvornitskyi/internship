@@ -1,5 +1,4 @@
-let mas = [1, 2, 1];
-function resMas(){
+function resMas(mas){
     let a = mas[0], b = mas[1], c = mas[2], x = 0, x1 = 0, x2 = 0;
     let D = b*b - 4*a*c;
     let aString = bString = cString = "";
@@ -34,12 +33,9 @@ function resMas(){
         cString = "- "+(-c);
     }
     if(a == 0 && b == 0 && c ==0){
-        console.log("Ужас так не делай");
+        console.log("x = 0");
     }
-    if(a == 0 && b == 0 && c !=0){
-        console.log("Ужас так не делай");
-    }
-    if(a == 0 && b != 0 && c ==0){
+    if(a === 0 && (b === 0 || c === 0)){
         console.log("Ужас так не делай");
     }
     if(a == 0 && b != 0 && c !=0){
@@ -82,4 +78,4 @@ function resMas(){
         }
     }
  }
-resMas();
+resMas([1, -2, -3]);
