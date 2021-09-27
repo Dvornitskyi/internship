@@ -37,7 +37,7 @@ PrimeNumberDec(100);
 //----------2
 class Validator{
     isEmail(value){
-      let reg = new RegExp(/@\w+\.\w+/g);
+      const reg = new RegExp(/@\w+\.\w+/g);
       if(reg.test(value))return true;
       return false;
     }
@@ -48,7 +48,7 @@ class Validator{
     }
     isDate(date){
       if(date.search(/[a-z]/g) != -1) throw new Error('Введите только цифры');
-      let reg = /\d{4}\-\d{2}\-\d{2}/g;
+      const reg = /\d{4}\-\d{2}\-\d{2}/g;
       if(reg.test(date) && date.length < 11) return true;
       return false;
     }
