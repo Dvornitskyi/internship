@@ -20,7 +20,7 @@ function PrimeNumber(num){
 console.log(PrimeNumber(100));
 
 //----------------declarative
-function PrimeNumberDec(num) {
+function PrimeNumberDec(num){
   let x = 2, y = '';
   while(num > x){
     while(num % x == 0){
@@ -37,14 +37,13 @@ PrimeNumberDec(100);
 //----------2
 class Validator{
     isEmail(value){
-      if(typeof value !== 'string') throw new Error('Введите строку');
       let reg = new RegExp(/@\w+\.\w+/g);
       if(reg.test(value))return true;
       return false;
     }
     isUrkainianPhoneNumber(number){
       if(number.length < 13) throw new Error('Включает в себя код Украины +38 и номер из 10 цифр, мало цифр');
-      if(number.length > 13) throw new Error('Включает в себя код Украины +38 и номер из 10 цифр, больше цифр')
+      if(number.length > 13) throw new Error('Включает в себя код Украины +38 и номер из 10 цифр, больше цифр');
       if(/\+38\d{10}/g.test(number)) return true;
     }
     isDate(date){
