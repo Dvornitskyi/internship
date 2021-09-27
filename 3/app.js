@@ -21,16 +21,16 @@ console.log(PrimeNumber(100));
 
 //----------------declarative
 function PrimeNumberDec(num){
-  let x = 2, y = '';
-  while(num > x){
-    while(num % x == 0){
-      num /= x;
-      y += x;
-    }
+    let x = 2, y = '';
+    while(num > x){
+        while(num % x == 0){
+        num /= x;
+        y += x;
+        }
     x++;
     if(num == x) y += x;
-  }
-  console.log(y.split(''));
+    }
+    console.log(y.split(''));
 }
 PrimeNumberDec(100);
 
