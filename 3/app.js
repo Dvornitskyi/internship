@@ -47,7 +47,6 @@ class Validator{
       if(/\+38\d{10}/g.test(number)) return true;
     }
     isDate(date){
-      date = date.replace(/-|\*|\ |\.|\//g, '-');
       if(date.search(/[a-z]/g) != -1) throw new Error('Введите только цифры');
       let reg = /\d{4}\-\d{2}\-\d{2}/g;
       if(reg.test(date) && date.length < 11) return true;
