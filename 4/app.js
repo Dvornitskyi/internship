@@ -1,11 +1,11 @@
 //-------------1-1
 function printNumbers(from, to){
-  if(from < to){
-    while(from < to){
-      setInterval(console.log(from), 1000);
-      from++;
-    } 
-  }
+	let time = setInterval(() => {
+		if(from < to){
+			console.log(from);
+			from++;
+		}
+	}, 1000);
 }
 // printNumbers(1, 10);
 
@@ -14,7 +14,7 @@ function printNumbersSetTimeout(from, to){
   let fromNumber = from;
   setTimeout(function printNumbersSet(){
     console.log(fromNumber);
-    if (fromNumber < to){
+    if(fromNumber < to){
       setTimeout(printNumbersSet, 1000);
     }
     fromNumber++;
@@ -23,11 +23,10 @@ function printNumbersSetTimeout(from, to){
 // printNumbersSetTimeout(1, 10);
 
 //----------------------------------2
-function clock() {
+function clock(){
   function clockDate(){
     console.clear();
-    console.log(Date());
-    
+    console.log(Date());  
   }
   setInterval(clockDate, 1000);
 }
